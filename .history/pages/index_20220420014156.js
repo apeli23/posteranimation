@@ -8,7 +8,7 @@ export default function Home() {
 
     for(var i = 1; i < 400; i++) {
       banner.innerHTML += "<div class='blocks'></div>";
-      blocks[0].style.animationDelay = `${i * 0.05}s`
+      
     }
 
   }, [])
