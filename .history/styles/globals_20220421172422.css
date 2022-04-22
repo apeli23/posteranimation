@@ -48,11 +48,7 @@ section h2 {
   animation: animate 2s ease-in-out forwards;
 }
 
-@keyframes animate {
-  0% {
-    transform: translateZ(2000px);
-  }
-  100%{
-    transform: translateZ(0px);
-  }
+@keyframes animate
+{
+  0
 }

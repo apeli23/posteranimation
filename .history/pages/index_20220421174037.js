@@ -2,10 +2,8 @@ import { useEffect } from 'react';
 
 export default function Home() {
  let duration, banner, blocks
- 
-
-  const animationHandler = () => {
-    banner = document.getElementsByClassName('banner')[0];
+  useEffect(() => {
+     banner = document.getElementsByClassName('banner')[0];
     console.log(banner)
      blocks = document.getElementsByClassName('blocks')
 
@@ -14,11 +12,13 @@ export default function Home() {
        duration = Math.random() * 5;
       blocks[i].style.animationDuration = 2 + duration + 's';
     }
-  }
+  })
+
+  const animationHandler = 
   return (
     <section>
       <h2>animation workspace</h2>
-      <div className="banner" onClick={animationHandler}>
+      <div className="banner">
         <div className="blocks"></div>
       </div>
     </section>

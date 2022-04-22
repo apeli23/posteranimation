@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 
 export default function Home() {
  let duration, banner, blocks
- 
+  useEffect(() => {
+     
+  })
 
   const animationHandler = () => {
     banner = document.getElementsByClassName('banner')[0];

@@ -1,20 +1,27 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+html,
+body 
+{
+  background-color: #720C1B;
+  overflow: hidden;
+
 }
 
-body {
-  background: #710c19;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 section {
   position: relative;
   width: 100%;
   height: 100vh;
-  transform-style: preserve-3d;
-  perspective: 500px;
 }
 
 section h2 {
@@ -24,7 +31,7 @@ section h2 {
   text-align: center;
   line-height: 100vh;
   font-size: 10vw;
-  color: #fff;
+  color: #FFF;
   font-weight: 700;
 }
 
@@ -37,22 +44,34 @@ section h2 {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  border: 5px solid #eaeaea;
 }
 
-.banner .blocks {
+.blocks {
   position: relative;
   display: block;
   width: 5vw;
   height: 5vh;
   background: #fff;
-  animation: animate 2s ease-in-out forwards;
+  animation: animate 0.75s ease-in-out forwards;
 }
 
-@keyframes animate {
-  0% {
-    transform: translateZ(2000px);
+@keyframes animate
+ {
+  0% 
+  {
+    opacity: 0;
+    transform: scale(0) translateY(1000px);
   }
-  100%{
-    transform: translateZ(0px);
+
+  50%
+  {
+    opacity:  1;
+  }
+
+  100%
+  {
+    opacity: 1;
+    transform: scale(1) translateY(0px);
   }
 }

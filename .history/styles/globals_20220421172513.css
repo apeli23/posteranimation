@@ -50,9 +50,9 @@ section h2 {
 
 @keyframes animate {
   0% {
-    transform: translateZ(2000px);
+    transform: translateZ(2000px)
   }
   100%{
-    transform: translateZ(0px);
+    tra
   }
 }

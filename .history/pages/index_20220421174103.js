@@ -2,7 +2,9 @@ import { useEffect } from 'react';
 
 export default function Home() {
  let duration, banner, blocks
- 
+  useEffect(() => {
+     
+  })
 
   const animationHandler = () => {
     banner = document.getElementsByClassName('banner')[0];
@@ -18,7 +20,7 @@ export default function Home() {
   return (
     <section>
       <h2>animation workspace</h2>
-      <div className="banner" onClick={animationHandler}>
+      <div className="banner">
         <div className="blocks"></div>
       </div>
     </section>
