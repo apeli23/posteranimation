@@ -37,15 +37,15 @@ body{
 .bg .block{
   position: relative;
   display: block;
-  width: 500vw;
-  height: 50vh;
+  width: 5vw;
+  height: 5vh;
   animation: AnimateBg 0.5s ease-in-out forwards;
   animation-delay: 0.5s;
 }
 @keyframes AnimateBg{
   0%{
       transform: translateZ(2000px);
-      background: url('../public/bg.jpg') no-repeat;
+      background: url('../images/bg.jpg') no-repeat;
       background-position: center;
       background-size: cover;
       background-attachment: fixed;
