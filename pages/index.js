@@ -1,36 +1,51 @@
 import { useEffect } from 'react';
+import { useScreenshot } from 'use-react-screenshot'
+import Animate from '../components/Animate';
+
 
 export default function Home() {
- let duration, banner, blocks
- 
+  
+  // const animationHandler = async (picture) => {
+  //   myImage = document.createElement('img');
+  //   myImage.src = picture
 
-  const animationHandler = () => {
-    banner = document.getElementsByClassName('banner')[0];
-     blocks = document.getElementsByClassName('blocks')
+  //   canvas = document.getElementById('canvas1');
+  //   ctx = canvas.getContext('2d');
+  //   canvas.width = 360
+  //   canvas.height = 280
+  //   ctx.drawImage(myImage, 0, 0, canvas.width, canvas.height);
 
-    // for(var i=1; i < 200; i++) {
-    //   banner.innerHTML += "<div className='blocks'></div>"
-    //    duration = Math.random() * 5;
-    //   blocks[i].style.animationDuration = 2 + duration + 's';
-    // }
-  }
+  //   let particlesArray = [];
+  //   const numberOfParticles = 5000;
 
-  useEffect(() => {
-    banner = document.getElementsByClassName('banner')[0];
-     blocks = document.getElementsByClassName('blocks')
+  //   x = Math.random() * canvas.width;
+  //   y = 0
+  //   speed = 0;
+  //   velocity = Math.random * 0.5;
+  //   size = Math.random() * 1.5 + 1
 
-    for(var i=1; i < 400; i++) {
-      banner.innerHTML += "<div class='blocks'></div>"
-       duration = Math.random() * 5;
-      blocks[i].style.animationDuration = 2 + duration + 's';
-    }
-  }, [])
+  //   await updateHandler(x, y).then(() => {
+  //     ctx.beginPath();
+  //   })
+
+  // }
+
+  // const updateHandler = (x, y, velocity) => {
+  //   y += velocity;
+  //   if (y >= canvas.height) {
+  //     y = 0;
+  //     x = Math.random() * canvas.width;
+  //   }
+  // }
+  // useEffect(() => {
+  //   for (let i = 0; i < numberOfParticles; i++){
+
+  //   }
+
+  // }, [])
   return (
-    <section>
-      <h2>animation workspace</h2>
-      <div className="banner" onClick={animationHandler}>
-        <div className="blocks"></div>
-      </div>
-    </section>
+    <div>
+      <Animate />
+    </div>
   )
 }
