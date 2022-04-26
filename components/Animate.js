@@ -48,10 +48,9 @@ export default class Animate extends Component {
             canvas.height = 280
 
             ctx.drawImage(myImage, 0, 0, canvas.width, canvas.height);
-            console.log(ctx)
 
-            // let particlesArray = [];
-            // const numberOfParticles = 5000;
+            let particlesArray = [];
+            const numberOfParticles = 5000;
             // class Particle {
             //     constructor() {
             //         this.x = Math.random() * canvas.width;
