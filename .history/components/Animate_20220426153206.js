@@ -59,7 +59,7 @@ export default function Animate() {
     return (
         <>
             <div className="item">
-                {link? <h3><b>Uploaded</b></h3>: <h3>Double Click anywhere to save Caption</h3>}
+                {link? <h3><b>Uploaded</b></h3>: <h3>Click anywhere to save Caption</h3>}
             </div>
             <div className="container" onClick={captionHandler}>
                 <div className="heart"></div>

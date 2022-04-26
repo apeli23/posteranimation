@@ -38,12 +38,11 @@ export default function Animate() {
     }
 
     async function captionHandler  () {
-        await takeScreenshot(document.body).then(function (caption) {
-            if (!caption) return
+        await takeScreenshot(document.body).then(function () {
             try {
                 fetch('/api/upload', {
                   method: 'POST',
-                  body: JSON.stringify({ data: userprofile }),
+                  body: JSON.stringify({ data: encoded_file }),
                   headers: { 'Content-Type': 'application/json' },
                 })
                   .then((response) => response.json())
@@ -59,7 +58,7 @@ export default function Animate() {
     return (
         <>
             <div className="item">
-                {link? <h3><b>Uploaded</b></h3>: <h3>Double Click anywhere to save Caption</h3>}
+                {link? <a href={link}>View Caption</a>: <h3>Click anywhere to save Caption</h3>}
             </div>
             <div className="container" onClick={captionHandler}>
                 <div className="heart"></div>

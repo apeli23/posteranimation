@@ -38,28 +38,19 @@ export default function Animate() {
     }
 
     async function captionHandler  () {
-        await takeScreenshot(document.body).then(function (caption) {
-            if (!caption) return
+        await takeScreenshot(profileref.current).then(function () {
             try {
-                fetch('/api/upload', {
-                  method: 'POST',
-                  body: JSON.stringify({ data: userprofile }),
-                  headers: { 'Content-Type': 'application/json' },
-                })
-                  .then((response) => response.json())
-                  .then((data) => {
-                    setLink(data.data);
-                  });
-              } catch (error) {
-                console.error(error);
-              }
+                console.log(userprofile)
+            } catch (error) {
+                console.log(error)
+            }
         })
     }
 
     return (
         <>
             <div className="item">
-                {link? <h3><b>Uploaded</b></h3>: <h3>Double Click anywhere to save Caption</h3>}
+                {link? <a href={link}>View Caption</a>: <h3>Click anywhere to save Caption</h3>}
             </div>
             <div className="container" onClick={captionHandler}>
                 <div className="heart"></div>

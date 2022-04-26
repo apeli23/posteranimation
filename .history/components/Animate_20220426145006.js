@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useScreenshot } from 'use-react-screenshot'
+import html2canvas from 'html2canvas';
 import anime from 'animejs';
 
 export default function Animate() {
     const inputRef = useRef(undefined);
-    const [link, setLink] = useState('');
-    const [userprofile, takeScreenshot] = useScreenshot();
+    const [link, setLink] = useState('')
     useEffect(() => {
         const container = document.querySelector('.container');
 
@@ -37,29 +36,17 @@ export default function Animate() {
         })
     }
 
-    async function captionHandler  () {
-        await takeScreenshot(document.body).then(function (caption) {
-            if (!caption) return
-            try {
-                fetch('/api/upload', {
-                  method: 'POST',
-                  body: JSON.stringify({ data: userprofile }),
-                  headers: { 'Content-Type': 'application/json' },
-                })
-                  .then((response) => response.json())
-                  .then((data) => {
-                    setLink(data.data);
-                  });
-              } catch (error) {
-                console.error(error);
-              }
-        })
+    function captionHandler() {
+      document.
+        // html2canvas(document.getElementsByClassName(".container")).then( caption => {
+        //     console.log(caption)
+        // })
     }
 
     return (
         <>
             <div className="item">
-                {link? <h3><b>Uploaded</b></h3>: <h3>Double Click anywhere to save Caption</h3>}
+                {link? <a href={link}>View Caption</a>: <h3>Click anywhere to save Caption</h3>}
             </div>
             <div className="container" onClick={captionHandler}>
                 <div className="heart"></div>
