@@ -1,9 +1,9 @@
  import React, {useEffect} from 'react';
 
- import anime from 'animejs';
+ const anime = require('animejs');
  
  export default function Animate() {
-console.log(anime)
+
     useEffect(() => {
         const container = document.querySelector('.container');
         

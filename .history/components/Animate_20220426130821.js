@@ -17,14 +17,12 @@ console.log(anime)
     }, [])
     function animeHearts() {
         anime({
-            targets: '.heart',
-            translateX: function(x) { 
-                return anime.random(-700, 700);
-            },
-            translateY: function(x) { 
-                return anime.random(-500, 500);
-            }
-        })
+            targets: '.hearts',
+            translateX: 250,
+            rotate: '1turn',
+            backgroundColor: '#FFF',
+            duration: 800
+          });
     }
    return (
      <div className="container" >

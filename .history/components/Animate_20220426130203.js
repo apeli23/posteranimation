@@ -1,9 +1,9 @@
  import React, {useEffect} from 'react';
 
- import anime from 'animejs';
+ const anime = require('animejs');
  
  export default function Animate() {
-console.log(anime)
+
     useEffect(() => {
         const container = document.querySelector('.container');
         
@@ -13,19 +13,13 @@ console.log(anime)
             container.appendChild(hearts);
         }
 
-        animeHearts()
-    }, [])
-    function animeHearts() {
         anime({
             targets: '.heart',
             translateX: function(x) { 
-                return anime.random(-700, 700);
-            },
-            translateY: function(x) { 
-                return anime.random(-500, 500);
+                return anime
             }
         })
-    }
+    }, [])
    return (
      <div className="container" >
        <div className="heart"></div>
