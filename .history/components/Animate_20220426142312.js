@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import anime from 'animejs';
 
 export default function Animate() {
     const inputRef = useRef(undefined);
-    const [link, setLink] = useState('')
     useEffect(() => {
         const container = document.querySelector('.container');
 
@@ -36,16 +35,24 @@ export default function Animate() {
         })
     }
 
-    function captionHandler() {
-            
-    }
+    function uploadHandler() {
 
+    }
     return (
         <>
             <div className="item">
-                {link? <a href={link}>View Caption</a>: <h3>Click anywhere to save Caption</h3>}
+                <input
+                    type="file"
+                    ref={inputRef}
+                    onChange={uploadHandler}
+                    style={{ display: "none" }}
+                    multiple={false}
+                />
             </div>
-            <div className="container" onClick={captionHandler}>
+            <div className="item">
+                <button onClick={() => {inputRef.current.}}>Caption</button>
+            </div>
+            <div className="container" >
                 <div className="heart"></div>
             </div>
         </>

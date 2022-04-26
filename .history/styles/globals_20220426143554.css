@@ -36,7 +36,7 @@ html body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: #e80202;
+  background-image: url("../public/sa");
   overflow: hidden
 }
 

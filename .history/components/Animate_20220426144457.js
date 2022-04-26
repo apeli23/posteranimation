@@ -37,9 +37,8 @@ export default function Animate() {
     }
 
     function captionHandler() {
-            
+console.log('clicked')
     }
-
     return (
         <>
             <div className="item">

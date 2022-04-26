@@ -4,7 +4,7 @@ import anime from 'animejs';
 
 export default function Animate() {
     const inputRef = useRef(undefined);
-    const [link, setLink] = useState('')
+    const [captionText, setCa]
     useEffect(() => {
         const container = document.querySelector('.container');
 
@@ -36,16 +36,15 @@ export default function Animate() {
         })
     }
 
-    function captionHandler() {
-            
+    function uploadHandler() {
+console.log('clicked')
     }
-
     return (
         <>
             <div className="item">
-                {link? <a href={link}>View Caption</a>: <h3>Click anywhere to save Caption</h3>}
+                <h2>Click to Caption</h2>
             </div>
-            <div className="container" onClick={captionHandler}>
+            <div className="container" onClick={() => {console.log('clicked')}}>
                 <div className="heart"></div>
             </div>
         </>

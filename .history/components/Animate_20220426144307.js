@@ -36,16 +36,15 @@ export default function Animate() {
         })
     }
 
-    function captionHandler() {
-            
+    function uploadHandler() {
+console.log('clicked')
     }
-
     return (
         <>
             <div className="item">
-                {link? <a href={link}>View Caption</a>: <h3>Click anywhere to save Caption</h3>}
+                {link? <a href={link}}
             </div>
-            <div className="container" onClick={captionHandler}>
+            <div className="container" onClick={() => {console.log('clicked')}}>
                 <div className="heart"></div>
             </div>
         </>

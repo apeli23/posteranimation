@@ -37,9 +37,8 @@ export default function Animate() {
     }
 
     function captionHandler() {
-            
+        cap
     }
-
     return (
         <>
             <div className="item">
